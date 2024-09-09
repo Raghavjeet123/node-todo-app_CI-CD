@@ -21,8 +21,7 @@ jobs:
       - name: install Dependencies
         run: npm install
 
-      - name: Run Test
-        run: npm test
+  
         
   test:
     runs-on: ubuntu:latest
@@ -44,6 +43,7 @@ jobs:
       - name: push Docker image to Docker Hub 
         uses: docker/docker/build-push-action@v6
         with:
+          context: .
           push: true
           tags: baishla123/node-todo-app_CI-CD:latest
          
