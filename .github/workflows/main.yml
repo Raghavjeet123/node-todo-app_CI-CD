@@ -33,7 +33,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: baishla123/node-todo-app_CI-CD:latest
+          tags: baishla123/node-todo-app:latest
          
          
          
