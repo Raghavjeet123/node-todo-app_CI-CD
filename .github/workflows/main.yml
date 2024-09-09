@@ -40,6 +40,13 @@ jobs:
         with:
          username: ${{secrets.USERNAME}}
          password: ${{secrets.PASSWORD}}
+
+      - name: push Docker image to Docker Hub 
+        uses: docker/docker/build-push-action@v6
+        with:
+          push: true
+          tags: baishla123/node-todo-app_CI-CD:latest
+         
          
          
           
